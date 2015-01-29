@@ -17,9 +17,9 @@ public class Q4ClassVisitor extends ClassVisitor {
 		//这里添加一个public void method(){};
 		MethodVisitor mv=cv.visitMethod(Opcodes.ACC_PUBLIC, "method", "()V",null,null);
 		if (mv != null) {
-			mv.visitCode();
-			mv.visitInsn(Opcodes.RETURN);
-			mv.visitMaxs(1, 1);
+			mv.visitCode();//开始访问方法内部的代码
+			mv.visitInsn(Opcodes.RETURN);//
+			mv.visitMaxs(1, 1);//最大栈，和最大变量
 			mv.visitEnd();
 		}
 		super.visitEnd();
