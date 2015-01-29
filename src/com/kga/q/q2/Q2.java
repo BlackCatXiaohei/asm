@@ -20,7 +20,7 @@ public class Q2 {
 		Q2ClassVisitor q2ClassVisitor=new Q2ClassVisitor(Opcodes.ASM4, qw);
 		System.out.println("===========================================");
 		cr.accept(q2ClassVisitor, 0);
-		System.out.println("===========================================");
+		System.out.println("==========================================");
 		System.out.println(	"被移除后的方法数量"+sl.loadClass(clasName,qw.toByteArray()).getDeclaredMethods().length);
 		printlnClass(qw.toByteArray());
 	}
