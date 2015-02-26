@@ -5,6 +5,11 @@ import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
+import java.security.ProtectionDomain;
+
+import org.objectweb.asm.ClassWriter;
+
+import com.kga.q.q4.Q4;
 
 public class Main {
 	private static java.lang.reflect.Method defineClass1;
